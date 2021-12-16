@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections;
+
+namespace ArrayListDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           ArrayList resultList = new ArrayList();
+            resultList.Add(22);
+            resultList.Add(30);
+            resultList.Add(25);
+            resultList.Add(45);
+            resultList.Add(null);
+            Console.WriteLine("original Array");
+           foreach(var item in resultList)
+           {
+                Console.WriteLine(item + ",");
+           }
+        }
+    }
+}
