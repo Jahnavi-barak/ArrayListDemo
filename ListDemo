@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ListDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> numberList = new List<int>();
+            numberList.Add(25);
+            numberList.Add(13);
+            numberList.Add(16);
+            numberList.Add(43);
+            numberList.Add(65);
+
+            Console.WriteLine("Count: {0}", numberList.Count);
+
+            Console.Write("List: ");
+            foreach (int i in numberList)
+            {
+                Console.Write(i + " ");
+            }
+
+            //Inserting element at 3 position
+            numberList.Insert(2, 18);
+            Console.Write("\nList after inserting a new element: ");
+            foreach (int i in numberList)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine("\nCount: {0}", numberList.Count);
+
+            //Sorting List
+            Console.Write("Sorted List: ");
+            numberList.Sort();
+            foreach (int i in numberList)
+            {
+                Console.Write(i + " ");
+            }
+
+            // Remove item from List
+            numberList.Remove(3);
+            Console.WriteLine("numberList after removing an element...");
+
+            foreach (int i in numberList)
+            {
+                Console.WriteLine(i);
+            }
+            numberList.Reverse();
+            Console.WriteLine("numberList after reversing an element");
+            foreach (int i in numberList)
+            {
+                Console.WriteLine(i);
+            }
+
+        }
+
+    }
+}
+
+
